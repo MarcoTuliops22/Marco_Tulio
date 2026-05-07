@@ -179,15 +179,12 @@ section p {
 }
 
 /* Formatação especial para especialidades */
-section:nth-of-type(3) p {
+.specialties-list {
     white-space: normal;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
-}
-
-section:nth-of-type(3) p::before {
-    content: none;
+    list-style: none;
 }
 
 .specialty-item {
@@ -200,11 +197,14 @@ section:nth-of-type(3) p::before {
     gap: 0.5rem;
     color: var(--text-main);
     font-size: 0.95rem;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .specialty-item:hover {
     background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: rgba(99, 102, 241, 0.3);
 }
 
 .specialty-item::before {
@@ -252,6 +252,16 @@ section:nth-of-type(3) p::before {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.wa-header-icon {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .wa-header-info h4 {
